@@ -1,0 +1,9 @@
+{
+    "batch_size": 32,
+    "num_epochs": 20,
+    "learning_rate": 0.0001,
+    "model_architecture": "ResNet50",
+    "num_classes": 361,
+    "optimizer": "Adam",
+    "scheduler": "CosineAnnealingLR"
+}
