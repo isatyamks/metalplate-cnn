@@ -6,34 +6,27 @@ This project implements a Convolutional Neural Network (CNN) for recognizing tex
 
 ```
 metalplate-cnn/
-├── src/
-│   ├── models/
-│   │   ├── metal_plate_cnn.py      # Core CNN model implementation
-│   │   └── weights/                # Model weights and checkpoints
-│   ├── data/
-│   │   ├── training/              # Training dataset
-│   │   ├── validation/            # Validation dataset
-│   │   ├── testing/              # Testing dataset
-│   │   ├── samples/              # Sample images
-│   │   ├── generate_dataset.py    # Dataset generation script
-│   │   └── create_class_mapping.py # Class mapping creation utility
-│   ├── utils/
-│   │   ├── image_processing.py    # Image processing utilities
-│   │   ├── data_generation.py     # Data generation utilities
-│   │   └── organization.py        # Organization utilities
-│   ├── scripts/
-│   │   ├── train_model.py         # Model training script
-│   │   ├── evaluate_model.py      # Model evaluation script
-│   │   ├── inference.py           # Inference script
-│   │   └── test_pipeline.py       # Pipeline testing script
-│   ├── config/
-│   │   ├── class_mapping.json     # Class mapping configuration
-│   │   └── test_results.json      # Test results
-│   └── visualization/
-│       └── sample_visualization.png # Sample visualization outputs
-├── requirements.txt               # Project dependencies
-└── README.md                     # This file
+├── data/                   # Dataset directory
+├── notebooks/             # Jupyter notebooks for development and analysis
+├── model.py              # Core CNN model implementation
+├── evaluate_model.py     # Model evaluation script
+├── test_pipeline.py      # Pipeline testing script
+├── requirements.txt      # Project dependencies
+└── README.md            # This file
 ```
+
+## Dependencies
+
+The project requires the following Python packages:
+- numpy (>=1.21.0)
+- opencv-python (>=4.5.0)
+- Pillow (>=8.0.0)
+- torch (>=1.9.0)
+- torchvision (>=0.10.0)
+- matplotlib (>=3.4.0)
+- tqdm (>=4.62.0)
+- scikit-learn (>=0.24.0)
+- pandas (>=1.3.0)
 
 ## Setup and Installation
 
@@ -52,23 +45,23 @@ pip install -r requirements.txt
 
 1. Training the model:
 ```bash
-python src/scripts/train_model.py
+python model.py
 ```
 
-2. Running inference:
+2. Evaluating the model:
 ```bash
-python src/scripts/inference.py --image path/to/image.jpg
+python evaluate_model.py
 ```
 
-3. Evaluating the model:
+3. Testing the pipeline:
 ```bash
-python src/scripts/evaluate_model.py
+python test_pipeline.py
 ```
 
 ## Model Architecture
 
 The model uses a CNN architecture with:
-- 5 convolutional layers with ReLU activation
+- Convolutional layers with ReLU activation
 - MaxPooling layers for dimensionality reduction
 - Fully connected layer for classification
 - Output size of 361 classes (A0000-A0360)
@@ -80,6 +73,13 @@ The pipeline includes:
 - Text region detection
 - Character segmentation
 - Classification
+
+## Development
+
+The project includes Jupyter notebooks for development and analysis in the `notebooks/` directory. These notebooks contain:
+- Model development and experimentation
+- Data analysis and visualization
+- Training and evaluation results
 
 ## License
 
