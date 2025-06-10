@@ -1,0 +1,16 @@
+# Core dependencies
+numpy>=1.21.0
+opencv-python>=4.5.0
+Pillow>=8.0.0
+
+# Deep Learning
+torch>=1.9.0
+torchvision>=0.10.0
+
+# Visualization and Utilities
+matplotlib>=3.4.0
+tqdm>=4.62.0
+
+# Optional but recommended
+scikit-learn>=0.24.0  # For data preprocessing and evaluation
+pandas>=1.3.0  # For data handling 
