@@ -3,11 +3,11 @@ import json
 from torchvision.datasets import ImageFolder
 
 def create_class_mapping():
-    train_dataset = ImageFolder(root='training_data')
+    train_dataset = ImageFolder(root='data\\training_data')
     
     class_mapping = {class_name: idx for idx, class_name in enumerate(train_dataset.classes)}
     
-    with open('class_mapping.json', 'w') as f:
+    with open('data\\class_mapping.json', 'w') as f:
         json.dump(class_mapping, f, indent=4)
     
     print(f"Created class mapping with {len(class_mapping)} classes:")
